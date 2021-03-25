@@ -1,0 +1,13 @@
+social(
+  input = "poster.Rmd",
+  output = "posters/2021-04-15.png",
+  rmd_params = list(
+    title = "My Journey To Transparency And Reproducibility",
+    # subtitle = '<i class = "fab fa-docker"></i> & <i class = "fab fa-r-project"></i>',
+    author = "Mickaël Canouil, _Ph.D._",
+    institute = "Inserm U1283 / CNRS UMR8199 / Institut Pasteur de Lille / Université de Lille",
+    date = 'Thursday, the 15<sup><i style="font-size:0.5em;">th</i></sup> of April, 2021 - 19 h 00 (CEST / UTC + 2)',
+    picture = "https://avatars.githubusercontent.com/u/8896044",
+    website = "[m.canouil.fr](https://m.canouil.fr/)"
+  )
+)

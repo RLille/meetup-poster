@@ -1,0 +1,53 @@
+---
+params:
+  title: "Title"
+  subtitle: NULL
+  author: "Firstname Lastname"
+  institute: NULL
+  date: 'Thursday, the 29<sup><i style="font-size:0.5em;">th</i></sup> of April, 2021 – 18 h 00 (CEST / UTC + 2)'
+  picture: "css/user-solid.svg"
+  website: "[rlille.fr](https://rlille.fr/)"
+title: "R Lille - Poster"
+output:
+  xaringan::moon_reader:
+    self_contained: true
+    css: [css/default.css, css/fonts.css, css/rlille.css]
+    seal: false
+    nature:
+      ratio: "16:9"
+---
+
+```{r setup, include = FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: title-slide
+
+```{css, echo = FALSE}
+.l {
+  float: left;
+  width: 15%;
+}
+.r {
+  float: right,
+  width: 85%;
+}
+```
+
+# `r params[["title"]]`
+
+## `r params[["subtitle"]]`
+
+.l[<img src = "`r params[["picture"]]`" height = "120px" id = "picture" />]
+
+.r[
+### `r params[["author"]]`
+
+`r if (!is.null(params[["institute"]])) paste0("### _", params[["institute"]], "_") `
+
+### `r params[["date"]]`
+]
+
+.slide-url[
+`r params[["website"]]`
+]
