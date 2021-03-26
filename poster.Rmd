@@ -13,8 +13,15 @@ output:
     self_contained: true
     css: [css/default.css, css/fonts.css, css/rlille.css]
     seal: false
+    includes:
+      after_body: css/scripts.html
     nature:
       ratio: "16:9"
+      slideNumberFormat: | 
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
 ---
 
 ```{r setup, include = FALSE}
@@ -31,6 +38,11 @@ class: title-slide
 .r {
   float: right,
   width: 85%;
+}
+.middle {
+  position: absolute;
+  left: 33%;
+  top: 33%;
 }
 ```
 
@@ -50,4 +62,55 @@ class: title-slide
 
 .slide-url[
 `r params[["website"]]`
+]
+
+---
+
+# Join Us!
+
+.pull-left.font150[
+
+We are always looking for speakers:
+
++ Conference (~ 1 hour)
+
++ Lightning talk (~ 20 minutes)
+
++ Workshop
+
+]
+
+.pull-right.font150[
+
+If you want to participate, it’s quite simple:
+
++ Pick a subject
+
++	Tell us when you want to talk
+
++	Talk/Wokshop in English for a worldwide audience, but French is welcome.
+
+]
+
+---
+
+# How to reach R Lille?
+
+.middle.center.font150[
+[<i class = "fab fa-twitter"></i> @rlille_rug](https://twitter.com/rlille_rug)
+
+[<i class = "fab fa-meetup"></i> meetup.rlille.fr](http://meetup.rlille.fr/)
+
+Direct email to one of the organisers
+]
+
+---
+class: part-slide
+
+.center[
+<a href="https://rlille.fr/" target="_blank"><img src="https://raw.githubusercontent.com/mcanouil/hex-stickers/main/SVG/rlille.svg" width = "200px"/></br>
+<img src="https://raw.githubusercontent.com/RLille/logos/main/RConsortium_Horizontal_Pantone.png" width = "200px"/>
+</br>
+<i style="font-size: 200%">rlille.fr</i>
+</a>
 ]

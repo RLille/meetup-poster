@@ -5,10 +5,10 @@ output: github_document
 # R Lille Meetup Posters
 
 ```{r, echo = FALSE, message = FALSE}
-source(here::here("R/00-social.R"))
+source("R/social.R")
 library(magick)
 
-posters <- setdiff(sub("\\.R$", "", dir("R", pattern = "\\.R$")), "00-social")
+posters <- setdiff(sub("\\.R$", "", dir("R", pattern = "\\.R$")), "social")
 rscript <- paste0("R/", posters, ".R")
 png <- paste0("posters/", posters, ".png")
 thumb <- paste0("thumbs/", posters, ".png")
@@ -19,7 +19,9 @@ resize <- function(path_in, path_out) {
   image_write(image, path_out)
 }
 
-outdated <- !file.exists(png) | file.mtime(png) < file.mtime(rscript)
+outdated <- !file.exists(png) | 
+  file.mtime(png) < file.mtime(rscript) | 
+  file.mtime(rscript) < file.mtime("R/social.R")
 invisible(lapply(rscript[outdated], source, encoding = "UTF-8"))
 
 poutdated <- !file.exists(thumb) | file.mtime(thumb) < file.mtime(png)
