@@ -14,7 +14,8 @@ output:
     css: [css/default.css, css/fonts.css, css/rlille.css]
     seal: false
     includes:
-      after_body: css/scripts.html
+      in_header: css/_favicon.html
+      after_body: css/_scripts.html
     nature:
       ratio: "16:9"
       slideNumberFormat: | 
