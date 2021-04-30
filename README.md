@@ -22,5 +22,8 @@
 <td align="center">
 <img alt="Poster for 2021-04-29 Meetup" src="thumbs/2021-04-29.png" width="384" height="216"><br /><a href="posters/2021-04-29.png">2021-04-29.png</a>
 </td>
+<td align="center">
+<img alt="Poster for 2021-06-17 Meetup" src="thumbs/2021-06-17.png" width="384" height="216"><br /><a href="posters/2021-06-17.png">2021-06-17.png</a>
+</td>
 </tr>
 </table>
