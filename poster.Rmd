@@ -11,11 +11,11 @@ title: "R Lille - Poster"
 output:
   xaringan::moon_reader:
     self_contained: true
+    mathjax: null
     css: [assets/default.css, assets/fonts.css, assets/rlille.css]
     seal: false
     includes:
-      in_header: assets/_favicon.html
-      after_body: assets/_scripts.html
+      in_header: assets/_scripts.html
     nature:
       ratio: "16:9"
       slideNumberFormat: | 
